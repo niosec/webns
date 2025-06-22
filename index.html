@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web Responsivo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Sitio Web</h1>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#calculadoras">Calculadoras</a></li>
+                    <li><a href="#acerca-de">Acerca de</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section active">
+            <div class="container">
+                <h2>Bienvenido a Nuestro Sitio</h2>
+                <p>Aquí encontrarás diversas herramientas y recursos.</p>
+                <p>Navega a través de las diferentes secciones usando el menú de arriba.</p>
+            </div>
+        </section>
+
+        <section id="calculadoras" class="section">
+            <div class="container">
+                <h2>Nuestras Calculadoras</h2>
+
+                <div class="calculator-card">
+                    <h3>Calculadora Básica</h3>
+                    <input type="number" id="num1" placeholder="Número 1">
+                    <input type="number" id="num2" placeholder="Número 2">
+                    <select id="operation">
+                        <option value="sum">+</option>
+                        <option value="subtract">-</option>
+                        <option value="multiply">*</option>
+                        <option value="divide">/</option>
+                    </select>
+                    <button onclick="calculateBasic()">Calcular</button>
+                    <p>Resultado: <span id="resultBasic"></span></p>
+                </div>
+
+                <div class="calculator-card">
+                    <h3>Calculadora de IMC (Índice de Masa Corporal)</h3>
+                    <p>Peso (kg): <input type="number" id="weight" placeholder="Ej: 70"></p>
+                    <p>Altura (m): <input type="number" id="height" step="0.01" placeholder="Ej: 1.75"></p>
+                    <button onclick="calculateBMI()">Calcular IMC</button>
+                    <p>Tu IMC: <span id="resultBMI"></span></p>
+                </div>
+
+                <div class="calculator-card">
+                    <h3>Calculadora de Interés Simple</h3>
+                    <p>Principal: <input type="number" id="principal" placeholder="Ej: 1000"></p>
+                    <p>Tasa Anual (%): <input type="number" id="rate" placeholder="Ej: 5"></p>
+                    <p>Tiempo (años): <input type="number" id="time" placeholder="Ej: 3"></p>
+                    <button onclick="calculateSimpleInterest()">Calcular Interés</button>
+                    <p>Interés Simple: <span id="resultSimpleInterest"></span></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="acerca-de" class="section">
+            <div class="container">
+                <h2>Acerca de Nosotros</h2>
+                <p>Este sitio web fue creado para demostrar la creación de una página responsiva con calculadoras interactivas usando HTML, CSS y JavaScript.</p>
+                <p>Nuestro objetivo es proporcionar herramientas útiles y fáciles de usar para todos.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
