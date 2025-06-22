@@ -1,1 +1,1 @@
-Simple conversor de unidades de medida para ingeniería civil.
+Página web dedicada a la ingeniería civil.
